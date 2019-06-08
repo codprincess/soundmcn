@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+<style>
+    .demo2 {
+        width:40px;
+        height:40px;
+        border-radius:40px ;
+        background:black;
+        display:block;
+        position: relative; 
+    }
+    
+    .demo2:before, .demo2::after {
+        content:"";
+        height:28px;
+        width:6px;
+        border-radius: 10px;
+        display:block;
+        background:white;
+        position: absolute;
+        top:6px;/*40-6=34*/
+        left:20px;/*make the two rects in the middle of the cycle */
+        transform:rotate(45deg);    
+        -ms-transform:rotate(45deg);    
+    }
+    .demo2::before {
+        height:15px;
+        transform: rotate(-45deg);
+        -ms-transform:rotate(-45deg);
+        position: absolute;
+        top:18px;/*40-18=12  */
+        left:8px;       
+    }
+</style>
+<span class="demo2"></span>
+</body>
+</html>
